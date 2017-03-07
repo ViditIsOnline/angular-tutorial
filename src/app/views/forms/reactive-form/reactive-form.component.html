@@ -16,33 +16,33 @@
       <div class="panel-heading">Output</div>
       <div class="panel-body">
         <!--start-->
-        <form #form="ngForm" novalidate>
+        <form [formGroup]="detailsForm" novalidate>
           <div class="form-group">
             <label for="firstNameId">First Name</label>
-            <input id="firstNameId" type="text" name="firstName" ngModel class="form-control" [(ngModel)]='firstName'>  
+            <input id="firstNameId" type="text" class="form-control" formControlName='firstName'>  
           </div>          
           <div class="form-group">
             <label for="lastNameId">Last Name</label>
-            <input id="lastNameId" type="text" name="lastName" [ngModel]='lastName' (ngModelChange)="lastNameChanged($event)"class="form-control">  
+            <input id="lastNameId" type="text" formControlName='lastName' class="form-control">  
           </div>          
           <div class="checkbox">
             <label for="checkboxId">
-              <input type="checkbox" id="checkboxId" name="isIndian" [(ngModel)]='isIndian'> Indian
+              <input type="checkbox" id="checkboxId" formControlName='isIndian'> Indian
             </label>
           </div>
           <div class="form-group">
             <label for="selectId">Primary Language</label>
-            <select name="languages" id="selectId" class="form-control" name="primaryLanguage" [(ngModel)]='primaryLanguage'>
+             <select name="languages" id="selectId" class="form-control" formControlName="primaryLanguage">
               <option value="English">English</option>
               <option value="Hindi">Hindi</option>
               <option value="Urdu">Urdu</option>
             </select>
           </div>          
-          <button type="submit" class="btn btn-primary">Ok</button>
-          <p> First Name : <strong>{{firstName}}</strong></p>
-          <p> Last Name : <strong>{{lastName}}</strong></p>
-          <p> Indian : <strong>{{isIndian}}</strong></p>
-          <p> Primary Language : <strong>{{primaryLanguage}}</strong></p>          
+          <button type="submit" class="btn btn-primary" (click)="updateValues()">Ok</button>
+          <p> First Name : <strong>{{firstName.value}}</strong></p>
+          <p> Last Name : <strong>{{lastName.value}}</strong></p>
+          <p> Indian : <strong>{{isIndian.value}}</strong></p>
+          <p> Primary Language : <strong>{{primaryLanguage.value}}</strong></p>          
         </form>
         <!--end-->
       </div>

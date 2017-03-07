@@ -8,12 +8,14 @@ import { SharedModule } from '../../shared/shared.module';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { FormValidatorComponent } from './form-validator/form-validator.component';
 import { CustomValidatorComponent } from './custom-validator/custom-validator.component';
+import { ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
   imports: [
     CommonModule,
     SharedModule,
-    FormsRoutingModule
+    FormsRoutingModule,
+    ReactiveFormsModule
   ],
   declarations: [HomeComponent, TemplateDrivenComponent, ReactiveFormComponent, FormValidatorComponent, CustomValidatorComponent]
 })
