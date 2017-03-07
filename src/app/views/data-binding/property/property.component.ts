@@ -8,8 +8,8 @@ import { FileReadService } from '../../../core/services/file-read.service';
 })
 // start
 export class PropertyComponent implements OnInit {
-  firstName = 'Vidit';
-  lastName = 'Shah';
+  firstName = 'Angular';
+  lastName = 'Tutotrial';
   fontWeight = 'bold';
   // end
 

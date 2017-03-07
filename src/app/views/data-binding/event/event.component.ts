@@ -13,8 +13,8 @@ export class EventComponent implements OnInit {
   fontWeight = 'bold';
 
   onClick(){
-    this.firstName = 'Vidit';
-    this.lastName = 'Shah';
+    this.firstName = 'Angular';
+    this.lastName = 'Tutotrial';
   }
   // end
 
