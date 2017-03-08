@@ -7,8 +7,8 @@ import { FileReadService } from '../../../core/services/file-read.service';
   templateUrl: './custom-validator.component.html',
   styleUrls: ['./custom-validator.component.scss']
 })
-  // start
 
+  // start
 export class CustomValidatorComponent implements OnInit {
   detailsForm: FormGroup;
 
