@@ -10,6 +10,7 @@ import { FileReadService } from '../../../core/services/file-read.service';
 
   // start
 export class CustomValidatorComponent implements OnInit {
+
   detailsForm: FormGroup;
 
   constructor(private _fileReadService: FileReadService, private _formBuilder: FormBuilder) {
