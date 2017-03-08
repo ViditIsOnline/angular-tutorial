@@ -1,3 +1,48 @@
-<p>
-  custom-validator works!
-</p>
+<div class="panel panel-default panel-without-top">
+  <div class="panel-body">
+    <div class="panel panel-default">
+      <div class="panel-heading">TS</div>
+      <div class="panel-body" >
+        <pre [innerText]='tsFileContent'></pre>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">HTML</div>
+      <div class="panel-body">
+        <pre [innerText]='htmlFileContent'></pre>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">Output</div>
+      <div class="panel-body">
+        <!--start-->
+        <form [formGroup]="detailsForm" novalidate>
+          <div class="form-group">
+            <label for="firstNameId">First Name</label>
+            <input id="firstNameId" type="text" class="form-control" formControlName='firstName'>  
+          </div>          
+          <div class="form-group">
+            <label for="lastNameId">Last Name</label>
+            <input id="lastNameId" type="text" formControlName='lastName' class="form-control">  
+          </div>          
+          <div class="checkbox">
+            <label for="checkboxId">
+              <input type="checkbox" id="checkboxId" formControlName='isIndian'> Indian
+            </label>
+          </div>
+          <div class="form-group">
+            <label for="selectId">Primary Language</label>
+             <select name="languages" id="selectId" class="form-control" formControlName="primaryLanguage">
+              <option value="English">English</option>
+              <option value="Hindi">Hindi</option>
+              <option value="Urdu">Urdu</option>
+            </select>
+          </div>          
+          <button type="submit" class="btn btn-primary">Ok</button>
+          <p> Validity : <strong>{{detailsForm.valid}}</strong></p>
+        </form>
+        <!--end-->
+      </div>
+    </div>
+  </div>
+</div>
